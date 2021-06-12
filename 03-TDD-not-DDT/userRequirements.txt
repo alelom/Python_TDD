@@ -1,0 +1,28 @@
+It's useful to use the requirements to list a set of functions that we need.
+These functions will first be written as tests, then implemented.
+For example:
+
+    Customers can buy music CDs. A CD can be found by searching the title and artist.
+    The CDs are held in a warehouse, and record labels can send batches of CDs to it.
+    Customers can only buy CDs that are in stock.
+
+We can highlight different scenarios for this:
+
+- Customers buy a CD:
+    - Find a CD in the stock by providing title and artist.
+    - If in stock, quantity can be deducted and CD bought.
+    - If not, throw exception.
+
+- Finding a CD in stock:
+    - If found, return CD data.
+    - If not found, return None.
+
+- Refilling the stock:
+    - Record labels can provide a batch of the same CD or of different CDs.
+    - If a CD is found in stock, add copies to it.
+    - If a CD is not found in stock, add it and its copies.
+
+Because we want to do TDD, we start by writing tests for each of these.
+Vice versa, we could start drawing an UML diagram designing the app, and then writing tests for all getters/setters/functions etc.
+But that would be Design Driven Testing (DDT) which is not what we want.
+

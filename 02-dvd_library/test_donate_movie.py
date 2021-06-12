@@ -16,14 +16,18 @@ class Library:
         
 
 class DonateMovieTest(unittest.TestCase):
-    def test_donate_movie(self):
-        movie = Movie()
-        library = Library([])
-        library.donate(movie)
-        
+    
+    def setUp(self):
+        self.movie = Movie()
+        self.library = Library([])
+        self.library.donate(self.movie)
+    
+    def test_library_contains_movie(self):
         # Start backwards from the assertion.
-        self.assertTrue(library.contains(movie))
-        self.assertEqual(1, movie.copies)
+        self.assertTrue(self.library.contains(self.movie))
+        
+    def test_library_contains_one_copy(self):
+        self.assertEqual(1, self.movie.copies)
 
 
 # Needed if the IDE does not capture tests.
