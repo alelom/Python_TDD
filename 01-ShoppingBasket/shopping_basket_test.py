@@ -20,6 +20,9 @@ class Test_ShoppingBasket(unittest.TestCase):
         basket = Basket([Item(100.0, 1), Item(100.0, 1)])
         self.assertEqual(basket.total(), 200.0)
         
+    def test_two_items_quantity_two(self):
+        basket = Basket([Item(100.0, 2), Item(100.0, 2)])
+        self.assertEqual(basket.total(), 400.0)
 
 if __name__ == '__main__':
     unittest.main()
