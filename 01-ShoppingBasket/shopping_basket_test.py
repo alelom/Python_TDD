@@ -24,5 +24,6 @@ class Test_ShoppingBasket(unittest.TestCase):
         basket = Basket([Item(100.0, 2), Item(100.0, 2)])
         self.assertEqual(basket.total(), 400.0)
 
+# Needed if the IDE does not capture tests.
 if __name__ == '__main__':
     unittest.main()
