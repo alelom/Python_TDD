@@ -1,4 +1,3 @@
-import unittest
 import dataclasses
 
 @dataclasses.dataclass 
@@ -7,8 +6,3 @@ class Basket(object): #dataclass is used for classes used mostly for holding dat
     
     def total(self):
         return 0
-
-class ShoppingBasketTest(unittest.TestCase):
-    def test_empty_basket(self):
-        basket = Basket([]) # passing an empty list "of items" as argument.
-        self.assertEqual(basket.total(), 0)
