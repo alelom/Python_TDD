@@ -22,5 +22,6 @@ class Test_BuyCD(unittest.TestCase):
         self.assertEqual(5, cd.get_stock_count())
         
 
-if __name__ == "__main__":
+# Needed if the IDE does not capture tests.
+if __name__ == '__main__':
     unittest.main()
