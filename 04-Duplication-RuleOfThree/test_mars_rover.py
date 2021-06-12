@@ -1,18 +1,18 @@
 import unittest
 from dataclasses import *
 from Rover import *
-
+from parameterized import parameterized, parameterized_class
     
 class MarsRoverTest(unittest.TestCase):
-    def test_turn_right_NtoE(self):
-        rover = Rover("N")
-        rover = rover.go("R") #go to the right.
-        self.assertEqual("E", rover.facing)
-        
-    def test_turn_right_EtoS(self):
-        rover = Rover("E")
-        rover = rover.go("R") #go to the right.
-        self.assertEqual("S", rover.facing)
+    @parameterized.expand(
+        [
+            ("N", "E")
+        ]
+    )
+    def test_turn_right_NtoE(self, start_dir, end_dir):
+        rover = Rover(start_dir)
+        rover = rover.turn_right() #go to the right.
+        self.assertEqual(end_dir, rover.facing)
         
     # we've here introduced duplication.
     # Before introducing a refactoring to abstract away and reduce duplication,

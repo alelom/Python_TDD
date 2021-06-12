@@ -6,9 +6,7 @@ from dataclasses import *
 class Rover:
     facing : str
     
-    def go(self, instruction):
-        if (self.facing == "N"):
-            return replace(self, facing = "E")
+    def turn_right(self):
+        directions = ["N", "E", "S", "W"] #sorted clockwise
         
-        if (self.facing == "E"):
-            return replace(self, facing = "S")
+        return replace(self, facing = directions[directions.index(self.facing) + 1])
