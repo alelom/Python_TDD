@@ -26,3 +26,4 @@ Because we want to do TDD, we start by writing tests for each of these.
 Vice versa, we could start drawing an UML diagram designing the app, and then writing tests for all getters/setters/functions etc.
 But that would be Design Driven Testing (DDT) which is not what we want.
 
+The tests should be meaningful for the outcome (the WHAT) from the perspective of the end-user/client.
