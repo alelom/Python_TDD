@@ -19,6 +19,7 @@ class MarsRoverTest(unittest.TestCase):
     # it's a good idea to keep adding duplication for a while.
     # This is because if we refactor duplication too early
     # we might be introducing the wrong abstraction.
+    # On the other hand, adding too much duplication takes too long to refactor.
     # Rule of three: introduce 3 duplicated cases before refactor and abstract.
 
 # Needed if the IDE does not capture tests.
